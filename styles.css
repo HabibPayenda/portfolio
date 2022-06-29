@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  width: 375px;
+  height: 44px;
+  left: 1px;
+  top: 1px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.459);
+}
+
+.logo {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: rgb(96, 112, 255);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#menu {
+  color: rgb(96, 112, 255);
+  font-size: 18px;
+  line-height: 20px;
+  margin-right: 15px;
+}
+
+.headline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/pro.png");
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  margin: 1px 24px;
+}
+
+.primary-text {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  padding-bottom: 10px;
+  color: rgb(80, 95, 121);
+}
+
+.details {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(80, 95, 121);
+}
+
+.connect {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(96, 112, 255);
+  padding: 5px 10px;
+  display: flex;
+  align-self: flex-start;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.fa-container {
+  display: flex;
+  align-self: flex-start;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+.fa {
+  padding-right: 20px;
+  align-self: flex-start;
+  color: rgb(80, 95, 121);
+  font-size: 16px;
+}
