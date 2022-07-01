@@ -100,6 +100,21 @@ header {
   align-self: flex-start;
   border-radius: 5px;
   text-decoration: none;
+  transition: all 0.2s;
+}
+
+.connect:hover {
+  background: rgb(96, 112, 255);
+  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
+
+.connect:active {
+  background: rgb(34, 48, 210);
+  box-shadow: 0.1px 0.1px 0.1px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
 }
 
 .fa-container {
@@ -229,13 +244,31 @@ header {
   border-radius: 10px;
   margin-left: 14px;
   color: rgb(96, 112, 255);
+  transition: all 0.2s;
+}
+
+.see-project:hover {
+  background: rgb(96, 112, 255);
+  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
+
+.see-project:active {
+  background: rgb(34, 48, 210);
+  box-shadow: 0.1px 0.1px 0.1px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
 }
 
 .about-myself {
   background-color: rgb(255, 255, 255);
   margin-top: 100px;
-  height: 800px;
+  height: 1263px;
   border-top-right-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .primary-text-about {
@@ -252,11 +285,18 @@ header {
 
 .fa-container-about {
   display: flex;
-  align-self: flex-start;
-  padding-left: 30px;
   padding-bottom: 30px;
   padding-top: 10px;
-  margin-left: 5px;
+  margin-left: 35px;
+}
+
+.fa-container-about ul li {
+  list-style: none;
+  display: inline;
+}
+
+.fa-container-about ul li a {
+  text-decoration: none;
 }
 
 .see-project-about {
@@ -269,13 +309,28 @@ header {
   font-size: 17px;
   line-height: 24px;
   border-radius: 10px;
-  margin-left: 35px;
   color: rgb(96, 112, 255);
+  transition: all 0.2s;
+  margin-left: 35px;
+}
+
+.see-project-about:hover {
+  background: rgb(96, 112, 255);
+  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
+
+.see-project-about:active {
+  background: rgb(34, 48, 210);
+  box-shadow: 0.1px 0.1px 0.1px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
 }
 
 .details-2 {
   width: 327px;
-  margin: 050px auto;
+  margin: 1px 35px;
 }
 
 .details-2 ul li {
@@ -294,5 +349,29 @@ header {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  margin: 10px;
+  margin: 20px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  width: 303px;
+  height: 66.72px;
+  background: rgb(247, 247, 249);
+  border-radius: 8px;
+  margin: 10px 1px;
+}
+
+.dropdown-img {
+  width: 48px;
+  height: 48px;
+  margin: 1px 20px;
+}
+
+.language {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
