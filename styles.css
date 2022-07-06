@@ -375,3 +375,107 @@ header {
   font-size: 15px;
   line-height: 20px;
 }
+
+.contact {
+  height: 779px;
+  width: 375px;
+  margin-top: -140px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-image: url("./img/contact.png");
+  background-color: rgb(96, 112, 255);
+  align-items: center;
+  padding: 100px 24px;
+  border-top-left-radius: 100px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-text {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: rgb(235, 235, 255);
+}
+
+.contact-text h2 {
+  margin-bottom: 30px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: rgb(255, 255, 255);
+}
+
+.input {
+  padding: 15px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-weight: 400;
+  color: rgb(23, 43, 77);
+  font-size: 17px;
+  line-height: 20px;
+  border: 1px solid rgb(207, 216, 220);
+  border-radius: 8px;
+}
+
+.area {
+  border-radius: 8px;
+  padding: 15px 38px 15px 16px;
+  height: 200px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  color: rgb(179, 186, 197);
+  line-height: 24px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: white;
+  color: rgb(96, 112, 255);
+  text-align: center;
+  font-size: 17px;
+  border: none;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  background: rgb(96, 112, 255);
+  border-radius: 8px;
+  color: white;
+}
+
+.button:focus {
+  background: rgb(34, 48, 210);
+  border-radius: 8px;
+}
+
+.last-div {
+  height: 5px;
+  width: 134px;
+  background: rgb(13, 21, 30);
+  border-radius: 10px;
+  position: absolute;
+  margin-top: 750px;
+}
