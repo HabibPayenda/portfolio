@@ -26,6 +26,8 @@
 
   .headline {
     background-image: url("./img/header.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .works-section {
@@ -204,7 +206,7 @@
     height: 496px;
     width: 1156px;
     background-color: rgb(255, 255, 255);
-    border-radius: 15px;
+    border-radius: 24px;
     padding: 24px;
   }
 
@@ -225,26 +227,34 @@
 
   .card-img-1 {
     background-image: url("./img/picB1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .card-img-2 {
     background-image: url("./img/picB2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .card-img-3 {
     order: 2;
     background-image: url("./img/picB3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .card-img-4 {
     order: 2;
     background-image: url("./img/picB4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .card-img {
     margin-top: 20px;
-    width: 270px;
-    height: 350px;
+    width: 544px !important;
+    height: 448px !important;
     flex: 1;
   }
 
