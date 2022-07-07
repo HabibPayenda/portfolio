@@ -26,6 +26,18 @@ header {
   background-color: rgb(255, 255, 255);
 }
 
+.navbar ul li {
+  display: none;
+  list-style: none;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(52, 69, 99);
+  margin-right: 15px;
+}
+
 .logo {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -64,7 +76,9 @@ header {
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-  margin: 1px 24px;
+  width: 327px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 
 .primary-text {
@@ -83,7 +97,6 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  padding: 10px;
   border-radius: 10px;
   color: rgb(80, 95, 121);
 }
@@ -95,12 +108,12 @@ header {
   font-size: 16px;
   line-height: 24px;
   color: rgb(96, 112, 255);
-  padding: 5px 10px;
   display: flex;
   align-self: flex-start;
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.2s;
+  padding-top: 12px;
 }
 
 .connect:hover {
@@ -120,9 +133,8 @@ header {
 .fa-container {
   display: flex;
   align-self: flex-start;
-  padding-left: 30px;
   padding-bottom: 30px;
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
 .fa {
@@ -137,7 +149,8 @@ header {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 4;
+  grid-template-columns: 327px;
+  grid-template-rows: repeat(4, 596px);
   grid-column-gap: 10px;
   grid-row-gap: 88px;
 }
@@ -287,7 +300,7 @@ header {
   display: flex;
   padding-bottom: 30px;
   padding-top: 10px;
-  margin-left: 35px;
+  align-self: flex-start;
 }
 
 .fa-container-about ul li {
@@ -311,7 +324,7 @@ header {
   border-radius: 10px;
   color: rgb(96, 112, 255);
   transition: all 0.2s;
-  margin-left: 35px;
+  align-self: flex-start;
 }
 
 .see-project-about:hover {
