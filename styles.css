@@ -236,6 +236,7 @@ header {
   color: rgb(96, 112, 255);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .tech-used li {
   display: inline;
   background-color: rgb(235, 235, 255);
