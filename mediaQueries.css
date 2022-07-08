@@ -77,7 +77,12 @@
   .card-img {
     margin-top: 20px;
     width: 270px;
+    transition: all 0.4s ease;
     height: 350px;
+  }
+
+  .card-img:hover {
+    transform: scale(1.05);
   }
 
   .sub-item {
