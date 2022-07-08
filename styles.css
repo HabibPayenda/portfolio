@@ -10,7 +10,7 @@ html {
 
 header {
   position: absolute;
-  width: 375px;
+  width: 100%;
   height: 44px;
   left: 1px;
   top: 1px;
@@ -24,6 +24,18 @@ header {
   padding: 10px;
   margin: 0;
   background-color: rgb(255, 255, 255);
+}
+
+.navbar ul li {
+  display: none;
+  list-style: none;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(52, 69, 99);
+  margin-right: 15px;
 }
 
 .logo {
@@ -64,7 +76,9 @@ header {
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-  margin: 1px 24px;
+  width: 327px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 
 .primary-text {
@@ -83,7 +97,6 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  padding: 10px;
   border-radius: 10px;
   color: rgb(80, 95, 121);
 }
@@ -95,12 +108,12 @@ header {
   font-size: 16px;
   line-height: 24px;
   color: rgb(96, 112, 255);
-  padding: 5px 10px;
   display: flex;
   align-self: flex-start;
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.2s;
+  padding-top: 12px;
 }
 
 .connect:hover {
@@ -120,9 +133,8 @@ header {
 .fa-container {
   display: flex;
   align-self: flex-start;
-  padding-left: 30px;
   padding-bottom: 30px;
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
 .fa {
@@ -137,7 +149,8 @@ header {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 4;
+  grid-template-columns: 327px;
+  grid-template-rows: repeat(4, 596px);
   grid-column-gap: 10px;
   grid-row-gap: 88px;
 }
@@ -155,6 +168,28 @@ header {
 
 .card-img {
   margin-top: 20px;
+  width: 295px;
+  height: 220px;
+}
+
+.card-img-1 {
+  background-image: url("./img/pic1.png");
+  background-size: cover;
+}
+
+.card-img-2 {
+  background-image: url("./img/pic2.png");
+  background-size: cover;
+}
+
+.card-img-3 {
+  background-image: url("./img/pic3.png");
+  background-size: cover;
+}
+
+.card-img-4 {
+  background-image: url("./img/pic4.png");
+  background-size: cover;
 }
 
 .details-container {
@@ -223,6 +258,7 @@ header {
   color: rgb(96, 112, 255);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .tech-used li {
   display: inline;
   background-color: rgb(235, 235, 255);
@@ -271,6 +307,11 @@ header {
   align-items: flex-start;
 }
 
+.text-holder-about {
+  flex: 1;
+  margin: 20px;
+}
+
 .primary-text-about {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -287,7 +328,7 @@ header {
   display: flex;
   padding-bottom: 30px;
   padding-top: 10px;
-  margin-left: 35px;
+  align-self: flex-start;
 }
 
 .fa-container-about ul li {
@@ -311,7 +352,7 @@ header {
   border-radius: 10px;
   color: rgb(96, 112, 255);
   transition: all 0.2s;
-  margin-left: 35px;
+  align-self: flex-start;
 }
 
 .see-project-about:hover {
@@ -331,6 +372,7 @@ header {
 .details-2 {
   width: 327px;
   margin: 1px 35px;
+  flex: 1;
 }
 
 .details-2 ul li {
