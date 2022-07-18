@@ -8,8 +8,9 @@ menu.onclick = () => {
 close.onclick = () => {
   openNav.style.display = 'none';
 };
-for (let i = 0; i < items.length; i + 1) {
-  items[i].onclick = () => {
+const newItems = [...items];
+newItems.forEach((item) => {
+  item.onclick = () => {
     openNav.style.display = 'none';
   };
-}
+});

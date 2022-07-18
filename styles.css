@@ -79,6 +79,7 @@ header {
   top: 62px;
   right: 38px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .logo {
