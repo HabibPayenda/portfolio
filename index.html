@@ -14,6 +14,27 @@
 </head>
 <body>
     <header>
+        <div id="openNav" class="openNav">
+            <i id="close" class="fa-solid fa-close closeIcon"></i>
+
+            <ul>
+                <li>
+                  <a class="item" href="#Portfolio">
+                    Portfolio
+                  </a>
+                </li>
+                <li >
+                    <a class="item" href="#About">
+                    About
+                  </a>
+                </li>
+                <li >
+                    <a class="item" href="#Contact">
+                    Contact
+                  </a>
+                </li>
+            </ul>
+        </div>
         <nav class="navbar">
             <a href="#" class="logo">My Logo</a>
             <ul>
@@ -22,7 +43,7 @@
                 <li>Contact</li>
             </ul>
             <i id="menu" class="fa-solid fa-bars"></i>
-        </nav>
+        </nav>        
     </header>
     <section class="headline">
         <div class="text-holder">
@@ -48,7 +69,7 @@
         </div>
     </section>
 
-    <section class="works-section">
+    <section id="Portfolio" class="works-section">
         <div class="card card-1">
             <div class="card-img card-img-1" > </div>
             <div class="details-container card-details-1">
@@ -139,7 +160,7 @@
         </div>
         
     </section>
-    <section class="about-myself">
+    <section id="About" class="about-myself">
         <div class="text-holder-about">
             <h2 class="primary-text-about">About Myself</h2>
             <p class="details">
@@ -224,7 +245,7 @@
             </ul>
         </div>
     </section>
-    <section class="contact">
+    <section id="Contact" class="contact">
         <div class="contact-text">
             <h2>Contact me</h2>
             <p class="contact-paragraph">
@@ -243,5 +264,7 @@
         </form>
         <div class="last-div"></div>
     </section>
+    <script src="./index.js"></script>
+
 </body>
 </html>

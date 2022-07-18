@@ -38,6 +38,49 @@ header {
   margin-right: 15px;
 }
 
+.openNav {
+  display: none;
+  width: 100vw;
+  background: rgba(96, 112, 255, 0.85);
+  background-blend-mode: multiply;
+  backdrop-filter: blur(7px);
+  height: 812px;
+  border-radius: 0.0001px;
+  z-index: 1001;
+  position: absolute;
+  top: 0.00001px;
+  left: 0.00001px;
+}
+
+.openNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  align-items: flex-start;
+  z-index: 10002;
+  margin: 28px;
+  margin-top: 106px;
+  gap: 40px;
+}
+
+.openNav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.closeIcon {
+  font-size: 22px;
+  position: absolute;
+  top: 62px;
+  right: 38px;
+  color: rgb(255, 255, 255);
+}
+
 .logo {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-style: normal;

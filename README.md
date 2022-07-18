@@ -7,7 +7,7 @@
 
 ## Built With
 
-- HTML, CSS
+- HTML, CSS, Javascript
 
 ## Live Demo (https://habibpayenda.github.io/portfolio/)
 
