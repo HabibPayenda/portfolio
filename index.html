@@ -15,8 +15,28 @@
 <body>
     <header>
         <nav class="navbar">
+            <div id="openNav" class="openNav">
+                <i id="close" class="fa-solid fa-close closeIcon"></i>
+                <ul>
+                    <li>
+                      <a class="item" href="#Portfolio">
+                        Portfolio
+                      </a>
+                    </li>
+                    <li >
+                        <a class="item" href="#About">
+                        About
+                      </a>
+                    </li>
+                    <li >
+                        <a class="item" href="#Contact">
+                        Contact
+                      </a>
+                    </li>
+                </ul>
+            </div>
             <a href="#" class="logo">My Logo</a>
-            <ul>
+            <ul class="desktopNav">
                 <li>Portfolio</li>
                 <li>About</li>
                 <li>Contact</li>
@@ -30,25 +50,25 @@
             <p class="details">
                 I'm a software developer! I can help you
                 build a product, feature or website Look
-                through some of my work and 
+                through some of my work and
                 Experience! If you like what you see and
-                have a project you need coded, don't 
-                hestiate to contact me.
+                have a project you need coded, don't
+                hesitate to contact me.
             </p>
             <a href="#" class="connect">Let's connect</a>
             <div class="fa-container">
-                
+
                   <i class="fa-brands fa-twitter fa"></i>
                   <i class="fa-brands fa-linkedin-in fa"></i>
                   <i class="fa-brands fa-medium fa" ></i>
                   <i class="fa-brands fa-github fa"></i>
                   <i class="fa-solid fa-hand-peace fa"></i>
-               
+
             </div>
         </div>
     </section>
 
-    <section class="works-section">
+    <section id="Portfolio" class="works-section">
         <div class="card card-1">
             <div class="card-img card-img-1" > </div>
             <div class="details-container card-details-1">
@@ -60,7 +80,7 @@
                 </ul>
                 <p class="card-text">
                     A daily selection of privately
-                    personalized reads: no accounts 
+                    personalized reads: no accounts
                     or sign-ups required.
                 </p>
                 <ul class="tech-used">
@@ -82,7 +102,7 @@
                 </ul>
                 <p class="card-text">
                     A daily selection of privately
-                    personalized reads: no accounts 
+                    personalized reads: no accounts
                     or sign-ups required.
                 </p>
                 <ul class="tech-used">
@@ -104,7 +124,7 @@
                 </ul>
                 <p class="card-text">
                     A daily selection of privately
-                    personalized reads: no accounts 
+                    personalized reads: no accounts
                     or sign-ups required.
                 </p>
                 <ul class="tech-used">
@@ -126,7 +146,7 @@
                 </ul>
                 <p class="card-text">
                     A daily selection of privately
-                    personalized reads: no accounts 
+                    personalized reads: no accounts
                     or sign-ups required.
                 </p>
                 <ul class="tech-used">
@@ -137,18 +157,18 @@
                 <a class="see-project" href="#">See Project</a>
             </div>
         </div>
-        
+
     </section>
-    <section class="about-myself">
+    <section id="About" class="about-myself">
         <div class="text-holder-about">
             <h2 class="primary-text-about">About Myself</h2>
             <p class="details">
                 I'm a software developer! I can help you
                 build a product, feature or website Look
-                through some of my work and 
+                through some of my work and
                 Experience! If you like what you see and
-                have a project you need coded, don't 
-                hestiate to contact me.
+                have a project you need coded, don't
+                hesitate to contact me.
             </p>
             <a href="#" class="connect">Let's connect</a>
             <div class="fa-container-about">
@@ -157,32 +177,32 @@
                        <a href="#">
                         <i class="fa-brands fa-twitter fa"></i>
                        </a>
-                   </li>        
+                   </li>
                     <li>
                        <a href="#">
                         <i class="fa-brands fa-linkedin-in fa"></i>
                        </a>
-                   </li>        
+                   </li>
                     <li>
                        <a href="#">
                         <i class="fa-brands fa-medium fa" ></i>
                        </a>
-                   </li>        
+                   </li>
                     <li>
                        <a href="#">
                         <i class="fa-brands fa-github fa"></i>
                        </a>
-                   </li>        
+                   </li>
                     <li>
                        <a href="#">
                         <i class="fa-solid fa-hand-peace fa"></i>
                        </a>
-                   </li>        
+                   </li>
                 </ul>
             </div>
             <a class="see-project-about" href="#">Get My Resume!</a>
         </div>
-       
+
         <div class="details-2">
             <ul>
                 <li>
@@ -193,7 +213,7 @@
                     <div class="dropdown-item-container">
                     <div class="dropdown-item">
                         <img class="dropdown-img" src="./img/js.png" alt="javascript">
-                        <a class="language">Javascritp</a>
+                        <a class="language">Javascript</a>
                     </div>
                     <div class="dropdown-item">
                         <img class="dropdown-img" src="./img/css.png" alt="CSS">
@@ -208,7 +228,7 @@
 
                 <li>
                     <div class="details-2-content">
-                       <p class="details-2-title">Framworks</p>
+                       <p class="details-2-title">Frameworks</p>
                        <i class="fa-solid fa-angle-down"></i>
                     </div>
                     <hr>
@@ -220,18 +240,18 @@
                     </div>
                     <hr>
                 </li>
-               
+
             </ul>
         </div>
     </section>
-    <section class="contact">
+    <section id="Contact" class="contact">
         <div class="contact-text">
             <h2>Contact me</h2>
             <p class="contact-paragraph">
                 If you have an application you
                 are interested in developing, a
-                feature that you need built or a 
-                project that needs coding. I'd 
+                feature that you need built or a
+                project that needs coding. I'd
                 love to help with it
             </p>
         </div>
@@ -243,5 +263,7 @@
         </form>
         <div class="last-div"></div>
     </section>
+    <script src="./index.js"></script>
+
 </body>
 </html>
