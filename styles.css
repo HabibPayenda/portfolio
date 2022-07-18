@@ -463,8 +463,8 @@ header {
 }
 
 .contact {
-  height: 779px;
-  width: 375px;
+  height: 100%;
+  width: 100%;
   margin-top: -140px;
   display: flex;
   justify-content: space-around;
