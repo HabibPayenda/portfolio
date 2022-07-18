@@ -5,6 +5,9 @@ const items = document.getElementsByClassName('item');
 menu.onclick = () => {
   openNav.style.display = 'block';
 };
+menu.onmouseover = () => {
+  document.body.style.cursor = 'hand';
+};
 close.onclick = () => {
   openNav.style.display = 'none';
 };
