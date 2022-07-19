@@ -220,22 +220,18 @@ header {
 }
 
 .card-img-1 {
-  background-image: url("./img/pic1.png");
   background-size: cover;
 }
 
 .card-img-2 {
-  background-image: url("./img/pic2.png");
   background-size: cover;
 }
 
 .card-img-3 {
-  background-image: url("./img/pic3.png");
   background-size: cover;
 }
 
 .card-img-4 {
-  background-image: url("./img/pic4.png");
   background-size: cover;
 }
 

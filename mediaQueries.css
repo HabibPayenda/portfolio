@@ -56,13 +56,17 @@
     grid-row-end: 4;
   }
 
+  .card-img-2 {
+    order: 2;
+  }
+
   .card-3 {
     grid-row-start: 4;
     grid-row-end: 5;
   }
 
   .card-img-3 {
-    order: 2;
+    order: 1;
   }
 
   .card-4 {
@@ -264,27 +268,23 @@
   }
 
   .card-img-1 {
-    background-image: url("./img/picB1.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .card-img-2 {
-    background-image: url("./img/picB2.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .card-img-3 {
     order: 2;
-    background-image: url("./img/picB3.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .card-img-4 {
     order: 2;
-    background-image: url("./img/picB4.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
