@@ -21,7 +21,7 @@ const projects = [
   {
     name: 'Canopy',
     details: ['CANOPY', 'Back End Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accountsor sign-ups required.',
+    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
     image: './img/pic',
     techs: ['html', 'css', 'javascript'],
     liveLink: '#',
@@ -30,7 +30,7 @@ const projects = [
   {
     name: 'Multi-Post Stories',
     details: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accountsor sign-ups required.',
+    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
     image: './img/pic',
     techs: ['html', 'Ruby on rails', 'css', 'javascript'],
     liveLink: '#',
@@ -39,7 +39,7 @@ const projects = [
   {
     name: 'Facebook 360',
     details: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accountsor sign-ups required.',
+    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
     image: './img/pic',
     techs: ['html', 'Ruby on rails', 'css', 'javascript'],
     liveLink: '#',
