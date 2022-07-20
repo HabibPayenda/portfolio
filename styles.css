@@ -26,6 +26,7 @@ header {
   background-color: rgb(255, 255, 255);
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .desktopNav li {
@@ -70,6 +71,25 @@ header {
   gap: 40px;
 }
 
+.modal-see a {
+  text-decoration: none;
+  color: rgb(96, 112, 255);
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  flex: 3;
+}
+
+.modal-see i {
+  align-self: flex-end;
+  text-decoration: none;
+  color: rgb(96, 112, 255);
+  font-size: 17px;
+  flex: 1;
+  padding: 1px;
+  text-align: center;
+}
+
 .openNav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -81,6 +101,15 @@ header {
   top: 62px;
   right: 38px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.closeIcon2 {
+  font-size: 22px;
+  position: absolute;
+  top: 38px;
+  right: 38px;
+  color: rgb(103, 121, 142);
   cursor: pointer;
 }
 
@@ -194,6 +223,7 @@ header {
 .works-section {
   margin-top: 100px;
   display: grid;
+  position: relative;
   align-items: center;
   justify-content: center;
   grid-template-columns: 327px;
@@ -220,22 +250,18 @@ header {
 }
 
 .card-img-1 {
-  background-image: url("./img/pic1.png");
   background-size: cover;
 }
 
 .card-img-2 {
-  background-image: url("./img/pic2.png");
   background-size: cover;
 }
 
 .card-img-3 {
-  background-image: url("./img/pic3.png");
   background-size: cover;
 }
 
 .card-img-4 {
-  background-image: url("./img/pic4.png");
   background-size: cover;
 }
 
@@ -307,10 +333,11 @@ header {
 
 /* stylelint-disable-next-line no-descending-specificity */
 .tech-used li {
-  display: inline;
+  display: inline-block;
   background-color: rgb(235, 235, 255);
   padding: 5px 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
   letter-spacing: 0.03em;
 }
@@ -337,11 +364,131 @@ header {
   color: rgb(255, 255, 255);
 }
 
+.fa-container-about ul li a {
+  text-decoration: none;
+}
+
+.see-project:hover a,
+.see-project:hover i {
+  color: white;
+}
+
 .see-project:active {
   background: rgb(34, 48, 210);
   box-shadow: 0.1px 0.1px 0.1px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   color: rgb(255, 255, 255);
+}
+
+.modalContainer {
+  display: none;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(193, 199, 208, 0.9);
+  z-index: 1;
+  height: 823px;
+  width: 100vw;
+}
+
+.projectModal {
+  display: flex;
+  height: 90vh;
+  max-height: 713px;
+  width: 95vw;
+  overflow-y: scroll;
+  border-radius: 16px;
+  position: sticky;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin: 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(223, 225, 230);
+  z-index: 1001;
+  padding: 24px;
+}
+
+.modal-card-img {
+  flex-shrink: 0;
+  width: 311px;
+  height: 220px;
+  border-radius: 8px;
+  align-self: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 36px;
+  margin-bottom: 59px;
+}
+
+.modalDetailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalTextContainer {
+  display: flex;
+  height: 220px;
+  width: 311px;
+  border-radius: 1px;
+  overflow-y: hidden;
+}
+
+.modal-text {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 1px;
+  padding: 1px;
+}
+
+.tech-used-modal {
+  display: flex;
+  flex: 1;
+  flex-flow: wrap;
+  list-style: none;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(96, 112, 255);
+  border-bottom: 1px solid #ebecf0;
+  margin-top: 16px;
+  margin-left: 1px !important;
+}
+
+.modal-see {
+  margin-top: 10px !important;
+  width: 142px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 15px;
+  border: solid 1px rgb(96, 112, 255);
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.tech-used-modal li {
+  display: inline-block;
+  background-color: rgb(235, 235, 255);
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  letter-spacing: 0.03em;
 }
 
 .about-myself {
@@ -381,10 +528,6 @@ header {
 .fa-container-about ul li {
   list-style: none;
   display: inline;
-}
-
-.fa-container-about ul li a {
-  text-decoration: none;
 }
 
 .see-project-about {
