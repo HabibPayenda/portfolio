@@ -224,9 +224,10 @@ const checkEmail = () => {
   const emailValue = email.value.trim();
   if (emailValue.match(/[A-Z]/)) {
     message.style.display = 'block';
-  } else {
-    message.style.display = 'none';
+    return false;
   }
+  message.style.display = 'none';
+  return true;
 };
 
 form.addEventListener('submit', (e) => {
