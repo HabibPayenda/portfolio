@@ -212,3 +212,24 @@ for (let i = 0; i < projects.length; i += 1) {
   card.append(cardImage, detailsContainer);
   worksSection.append(card);
 }
+
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+
+const message = document.getElementById('email-text');
+message.style.color = 'red';
+message.innerText = 'Email should be lowercase!';
+
+const checkEmail = () => {
+  const emailValue = email.value.trim();
+  if (emailValue.match(/[A-Z]/)) {
+    message.style.display = 'block';
+  } else {
+    message.style.display = 'none';
+  }
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkEmail();
+});
