@@ -214,7 +214,17 @@ for (let i = 0; i < projects.length; i += 1) {
 }
 
 const form = document.getElementById('form');
+const userName = document.getElementById('name');
 const email = document.getElementById('email');
+const emailText = document.getElementById('emailText');
+
+const userDataCheck = !!localStorage.getItem('userData');
+if (userDataCheck) {
+  const data = JSON.parse(localStorage.getItem('userData'));
+  userName.value = data.userName;
+  email.value = data.email;
+  emailText.value = data.emailText;
+}
 
 const message = document.getElementById('email-text');
 message.style.color = 'red';
@@ -232,5 +242,15 @@ const checkEmail = () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
   checkEmail();
+});
+
+form.addEventListener('submit', () => {
+  const userData = {
+    userName: userName.value,
+    email: email.value,
+    emailText: emailText.value,
+  };
+  localStorage.setItem('userData', JSON.stringify(userData));
 });
