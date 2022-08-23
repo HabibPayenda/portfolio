@@ -2,7 +2,7 @@
 
 # Portfolio
 
-> Microverse assigned project
+> This is a Protfolio website where a software developer can show case their work, the projects they have, show which technologies they can work with and provides a form where someone can send them an email.
 
 
 ## Built With
