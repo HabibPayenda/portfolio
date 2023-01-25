@@ -35,12 +35,12 @@ newItems.forEach((item) => {
 });
 const projects = [
   {
-    name: 'Canopy',
-    details: ['CANOPY', 'Back End Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Cash Guys',
+    details: ['Microverse', 'Ruby on Rails App', '2023'],
+    description: 'CashBack is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
+    fullDescription: 'CashBack is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
-    techs: ['html', 'css', 'javascript'],
+    techs: ['html', 'css', 'Ruby on Rails', 'PostgreSQL'],
     liveLink: '#',
     sourceLink: '#',
   },
@@ -188,9 +188,12 @@ for (let i = 0; i < projects.length; i += 1) {
   const card = document.createElement('div');
   card.setAttribute('id', JSON.stringify(num));
   card.classList.add('card', `card${num}`);
+  const cardImageContainer = document.createElement('div');
+  cardImageContainer.classList.add('cardImageContainer');
   const cardImage = document.createElement('div');
   cardImage.classList.add('card-img', `card-img-${num}`);
   cardImage.style.backgroundImage = window.matchMedia('(min-width: 768px)') ? `url(${projects[i].image}B${num}.png)` : `url(${projects[i].image}${num}.png)`;
+  cardImageContainer.append(cardImage);
   const detailsContainer = document.createElement('div');
   detailsContainer.classList.add('details-container', 'card-details-1');
   const mainTitle = document.createElement('h2');
@@ -225,7 +228,7 @@ for (let i = 0; i < projects.length; i += 1) {
   };
 
   detailsContainer.append(mainTitle, subDeatails, cardText, techUsed, seeProject);
-  card.append(cardImage, detailsContainer);
+  card.append(cardImageContainer, detailsContainer);
   worksSection.append(card);
 }
 

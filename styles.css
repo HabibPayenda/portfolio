@@ -320,6 +320,39 @@ header {
   margin-top: 20px;
   width: 295px;
   height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  content: '';
+  height: 50%;
+  width: 100%;
+  background-color: rgba(96, 112, 255, 0.85);
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -30%;
+  right: 40%;
+  opacity: 0;
+}
+
+.cardImageContainer:hover .card-img::before {
+  animation: slidingDown 0.3s ease-in;
+  opacity: 100%;
+}
+
+@keyframes slidingDown {
+  from {
+    transform: translateY(-50px) translateX(-50px) rotate(-45deg);
+  }
+
+  to {
+    transform: translate(0) rotate(-45deg);
+  }
 }
 
 .card-img-1 {
@@ -499,6 +532,7 @@ header {
   background-repeat: no-repeat;
   margin-top: 36px;
   margin-bottom: 59px;
+  position: relative;
 }
 
 .modalDetailsContainer {

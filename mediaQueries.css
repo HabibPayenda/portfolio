@@ -86,10 +86,6 @@
     flex: 1.5;
   }
 
-  .card-img:hover {
-    transform: scale(1.05);
-  }
-
   .sub-item {
     margin-top: 20px;
   }
