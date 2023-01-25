@@ -4,8 +4,13 @@ const openNav = document.getElementById('openNav');
 const items = document.getElementsByClassName('item');
 const audio = document.getElementById('audio');
 const audio2 = document.getElementById('audio2');
+const audio3 = document.getElementById('audio3');
+const audio4 = document.getElementById('audio4');
 const pors = document.getElementsByClassName('por');
 const fas = document.getElementsByClassName('fa');
+const connectBtn = document.getElementById('connectBtn');
+
+connectBtn.addEventListener('mouseover', () => audio4.play());
 
 Array.from(fas).forEach((fa) => {
   fa.addEventListener('mouseover', () => {
@@ -190,6 +195,7 @@ for (let i = 0; i < projects.length; i += 1) {
   card.classList.add('card', `card${num}`);
   const cardImageContainer = document.createElement('div');
   cardImageContainer.classList.add('cardImageContainer');
+  cardImageContainer.addEventListener('mouseover', () => audio3.play());
   const cardImage = document.createElement('div');
   cardImage.classList.add('card-img', `card-img-${num}`);
   cardImage.style.backgroundImage = window.matchMedia('(min-width: 768px)') ? `url(${projects[i].image}B${num}.png)` : `url(${projects[i].image}${num}.png)`;
@@ -213,6 +219,7 @@ for (let i = 0; i < projects.length; i += 1) {
   techUsed.classList.add('tech-used');
   projects[i].techs.forEach((item) => {
     const techItem = document.createElement('li');
+    techItem.addEventListener('mouseover', () => audio2.play());
     techItem.innerText = item;
     techUsed.append(techItem);
   });
@@ -220,6 +227,7 @@ for (let i = 0; i < projects.length; i += 1) {
   const seeProject = document.createElement('a');
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
+  seeProject.addEventListener('mouseover', () => audio4.play());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
