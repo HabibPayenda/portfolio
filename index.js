@@ -3,9 +3,15 @@ const close = document.getElementById('close');
 const openNav = document.getElementById('openNav');
 const items = document.getElementsByClassName('item');
 const audio = document.getElementById('audio');
+const audio2 = document.getElementById('audio2');
 const pors = document.getElementsByClassName('por');
-console.log(pors);
+const fas = document.getElementsByClassName('fa');
 
+Array.from(fas).forEach((fa) => {
+  fa.addEventListener('mouseover', () => {
+    audio2.play();
+  });
+});
 Array.from(pors).forEach((por) => {
   por.addEventListener('mouseover', () => {
     audio.play();
