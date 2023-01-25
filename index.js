@@ -2,6 +2,16 @@ const menu = document.getElementById('menu');
 const close = document.getElementById('close');
 const openNav = document.getElementById('openNav');
 const items = document.getElementsByClassName('item');
+const audio = document.getElementById('audio');
+const pors = document.getElementsByClassName('por');
+console.log(pors);
+
+Array.from(pors).forEach((por) => {
+  por.addEventListener('mouseover', () => {
+    audio.play();
+  });
+});
+
 menu.onclick = () => {
   openNav.style.display = 'block';
 };

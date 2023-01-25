@@ -27,6 +27,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  box-shadow: 4px 0 1px;
 }
 
 .desktopNav li {

@@ -193,17 +193,6 @@
 
   .logo {
     transition: all 3s ease-in;
-    animation: rotateLogo 3s;
-  }
-
-  @keyframes rotateLogo {
-    from {
-      transform: scale(0) rotate(1deg);
-    }
-
-    to {
-      transform: scale(1) rotate(360deg);
-    }
   }
 
   #menu {
