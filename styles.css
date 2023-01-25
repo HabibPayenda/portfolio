@@ -447,6 +447,14 @@ header {
   margin-bottom: 10px;
   border-radius: 5px;
   letter-spacing: 0.03em;
+  transition: all 0.3s;
+}
+
+.tech-used li:hover {
+  transform: translateY(-3px);
+  background-color: rgba(96, 112, 255, 0.85);
+  color: white;
+  cursor: default;
 }
 
 .see-project {
