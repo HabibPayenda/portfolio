@@ -189,7 +189,8 @@ header {
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.2s;
-  padding-top: 12px;
+  margin-top: 12px;
+  padding: 5px 10px;
 }
 
 .connect:hover {
@@ -272,6 +273,7 @@ header {
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
+  margin-bottom: 12px;
 }
 
 .main-title {
@@ -502,8 +504,12 @@ header {
 }
 
 .text-holder-about {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .primary-text-about {
@@ -560,6 +566,9 @@ header {
 }
 
 .details-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   width: 327px;
   margin: 1px 35px;
   flex: 1;
