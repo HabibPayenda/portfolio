@@ -83,6 +83,7 @@
     width: 270px;
     transition: all 0.4s ease;
     height: 350px;
+    flex: 1.5;
   }
 
   .card-img:hover {
@@ -449,9 +450,11 @@
   }
 
   .text-holder-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
-    margin: 142px;
-    margin-right: 1px;
+    margin: 0px 35px;
   }
 
   .dropdown-item-container {

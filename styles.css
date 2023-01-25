@@ -501,6 +501,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 35px;
 }
 
 .text-holder-about {
@@ -570,7 +571,6 @@ header {
   align-items: flex-start;
   justify-content: center;
   width: 327px;
-  margin: 1px 35px;
   flex: 1;
 }
 
