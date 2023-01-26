@@ -60,24 +60,24 @@ const projects = [
     sourceLink: '#',
   },
   {
-    name: 'Facebook 360',
-    details: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Book Store CMS',
+    details: ['Microverse', 'React App', '2022'],
+    description: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
+    fullDescription: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     image: './img/pic',
-    techs: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    liveLink: 'https://bookstore-redux.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/BookStore',
   },
   {
-    name: 'Uber Navigation',
-    details: ['Uber', 'Lead Developer', '2018'],
-    description: 'A daily selection of privately personalized reads: no accountsor sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Math Magicians',
+    details: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
+    fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
-    techs: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    liveLink: 'https://6324c2d62139ab0f678d36d3--endearing-sopapillas-233e38.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/mathMagicians',
   },
 ];
 
@@ -228,6 +228,7 @@ for (let i = 0; i < projects.length; i += 1) {
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
   seeProject.addEventListener('mouseover', () => audio4.play());
+  seeProject.addEventListener('mouseleave', () => audio4.stop());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
