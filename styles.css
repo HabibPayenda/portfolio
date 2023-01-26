@@ -46,6 +46,15 @@ header {
   padding: 5px 6px;
 }
 
+.modal-see a {
+  text-decoration: none;
+  color: rgb(96, 112, 255);
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  flex: 3;
+}
+
 .desktopNav li a {
   text-decoration: none;
   color: rgb(96, 112, 255);
@@ -83,6 +92,30 @@ header {
   border-radius: 5px;
 }
 
+.openNav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa-container-about ul li a {
+  text-decoration: none;
+}
+
+.modal-see i {
+  align-self: flex-end;
+  text-decoration: none;
+  color: rgb(96, 112, 255);
+  font-size: 17px;
+  flex: 1;
+  padding: 1px;
+  text-align: center;
+}
+
+.see-project:hover a,
+.see-project:hover i {
+  color: white;
+}
+
 .desktopNav li:hover a {
   transform: translateY(-3px);
 }
@@ -110,7 +143,7 @@ header {
 .openNav {
   display: none;
   width: 100vw;
-  background: rgba(96, 112, 255, 0.85);
+  background: white;
   background-blend-mode: multiply;
   backdrop-filter: blur(7px);
   height: 812px;
@@ -119,6 +152,21 @@ header {
   position: absolute;
   top: 0.00001px;
   left: 0.00001px;
+  animation: slideIn ease-in-out 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.name {
+  color: rgba(96, 112, 255, 0.85);
 }
 
 .openNav ul {
@@ -137,36 +185,20 @@ header {
   gap: 40px;
 }
 
-.modal-see a {
-  text-decoration: none;
-  color: rgb(96, 112, 255);
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  flex: 3;
-}
-
-.modal-see i {
-  align-self: flex-end;
-  text-decoration: none;
-  color: rgb(96, 112, 255);
-  font-size: 17px;
-  flex: 1;
-  padding: 1px;
+.openNav ul li {
+  width: 100%;
+  font-size: 16px;
   text-align: center;
-}
-
-.openNav ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+  background-color: rgba(96, 112, 255, 0.85);
+  box-shadow: 0 1px 1px #666;
 }
 
 .closeIcon {
   font-size: 22px;
   position: absolute;
-  top: 62px;
-  right: 38px;
-  color: rgb(255, 255, 255);
+  top: 10px;
+  right: 24px;
+  color: rgb(34, 48, 210);
   cursor: pointer;
 }
 
@@ -451,6 +483,16 @@ header {
   transition: all 0.3s;
 }
 
+.fa-container-about ul li {
+  list-style: none;
+  display: inline;
+}
+
+.details-2 ul li {
+  width: 100%;
+  list-style: none;
+}
+
 .tech-used li:hover {
   transform: translateY(-3px);
   background-color: rgba(96, 112, 255, 0.85);
@@ -478,15 +520,6 @@ header {
   box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   color: rgb(255, 255, 255);
-}
-
-.fa-container-about ul li a {
-  text-decoration: none;
-}
-
-.see-project:hover a,
-.see-project:hover i {
-  color: white;
 }
 
 .see-project:active {
@@ -648,11 +681,6 @@ header {
   align-self: flex-start;
 }
 
-.fa-container-about ul li {
-  list-style: none;
-  display: inline;
-}
-
 .see-project-about {
   text-decoration: none;
   padding: 10px 20px;
@@ -692,11 +720,6 @@ header {
 
 .details-2 ul {
   width: 100%;
-}
-
-.details-2 ul li {
-  width: 100%;
-  list-style: none;
 }
 
 .details-2-content {
