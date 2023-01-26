@@ -16,16 +16,50 @@ const languagesPanel = document.getElementById('languagesPanel');
 const frameworks = document.getElementById('frameworks');
 const frameworksPanel = document.getElementById('frameworksPanel');
 
+const databases = document.getElementById('databases');
+const databasesPanel = document.getElementById('databasesPanel');
+
+const skills = document.getElementById('skills');
+const skillsPanel = document.getElementById('skillsPanel');
+
+skillsPanel.addEventListener('click', () => {
+  audio.play();
+  if (skills.style.display === 'flex') {
+    skills.style.display = 'none';
+  } else {
+    skills.style.display = 'flex';
+    frameworks.style.display = 'none';
+    languages.style.display = 'none';
+    databases.style.display = 'none';
+  }
+});
+
+databasesPanel.addEventListener('click', () => {
+  audio.play();
+  if (databases.style.display === 'flex') {
+    databases.style.display = 'none';
+  } else {
+    databases.style.display = 'flex';
+    frameworks.style.display = 'none';
+    languages.style.display = 'none';
+    skills.style.display = 'none';
+  }
+});
+
 frameworksPanel.addEventListener(('click'), () => {
+  audio.play();
   if (frameworks.style.display === 'flex') {
     frameworks.style.display = 'none';
   } else {
     frameworks.style.display = 'flex';
     languages.style.display = 'none';
+    databases.style.display = 'none';
+    skills.style.display = 'none';
   }
 });
 
 languagesPanel.addEventListener('click', () => {
+  audio.play();
   if (languages.style.display === 'flex') {
     languages.style.display = 'none';
     languages.style.opacity = 0;
@@ -33,6 +67,8 @@ languagesPanel.addEventListener('click', () => {
     languages.style.display = 'flex';
     languages.style.opacity = '100%';
     frameworks.style.display = 'none';
+    databases.style.display = 'none';
+    skills.style.display = 'none';
   }
 });
 

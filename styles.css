@@ -6,6 +6,7 @@
 
 html {
   background-color: rgb(238, 238, 238);
+  scroll-behavior: smooth;
 }
 
 header {
@@ -722,10 +723,28 @@ header {
   margin: 20px;
 }
 
+.downIcon {
+  animation: dropDownMove 1.3s ease-in-out infinite;
+  transform-origin: 50% 0;
+}
+
+@keyframes dropDownMove {
+  from {
+    transform: scaleY(0) translateY(-10px);
+  }
+
+  to {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
 .dropdown-item-container {
   display: flex;
   transform-origin: 50% 0;
   animation: dropDown 0.3s;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 @keyframes dropDown {
@@ -740,12 +759,15 @@ header {
 
 .dropdown-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 303px;
+  justify-content: center;
   height: 66.72px;
   background: rgb(247, 247, 249);
   border-radius: 8px;
   margin: 10px 1px;
+  text-align: center;
+  padding: 5px;
 }
 
 .dropdown-img {
@@ -763,6 +785,14 @@ header {
 }
 
 #frameworks {
+  display: none;
+}
+
+#databases {
+  display: none;
+}
+
+#skills {
   display: none;
 }
 
