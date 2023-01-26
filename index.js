@@ -42,12 +42,12 @@ const projects = [
   {
     name: 'Cash Guys',
     details: ['Microverse', 'Ruby on Rails App', '2023'],
-    description: 'CashBack is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
-    fullDescription: 'CashBack is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
+    description: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
+    fullDescription: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
     techs: ['HTML', 'CSS', 'Ruby on Rails', 'PostgreSQL'],
-    liveLink: '#',
-    sourceLink: '#',
+    liveLink: 'https://rails-ah0l.onrender.com/',
+    sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
   {
     name: 'Countries Info',
@@ -56,8 +56,8 @@ const projects = [
     fullDescription: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     image: './img/pic',
     techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
-    liveLink: '#',
-    sourceLink: '#',
+    liveLink: 'https://southaisacountries.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/Countries',
   },
   {
     name: 'Book Store CMS',
