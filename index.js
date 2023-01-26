@@ -10,6 +10,19 @@ const pors = document.getElementsByClassName('por');
 const fas = document.getElementsByClassName('fa');
 const connectBtn = document.getElementById('connectBtn');
 
+const languages = document.getElementById('languagesContainer');
+const languagesPanel = document.getElementById('languagesPanel');
+
+languagesPanel.addEventListener('click', () => {
+  if (languages.style.display === 'flex') {
+    languages.style.display = 'none';
+    languages.style.opacity = 0;
+  } else {
+    languages.style.display = 'flex';
+    languages.style.opacity = '100%';
+  }
+});
+
 connectBtn.addEventListener('mouseover', () => audio4.play());
 
 Array.from(fas).forEach((fa) => {
@@ -71,7 +84,7 @@ const projects = [
   },
   {
     name: 'Math Magicians',
-    details: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    details: ['Microverse', 'React App', '2022'],
     description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
@@ -168,7 +181,7 @@ const modalCreator = () => {
   const modalSeeSource = document.createElement('a');
   // modalSeeSource.classList.add('see-project', 'modal-see');
   modalSeeSource.innerText = 'See Source';
-  modalSeeSource.setAttribute('href', modalData.liveLink);
+  modalSeeSource.setAttribute('href', modalData.sourceLink);
   modalSeeSource.onclick = () => {
     projectModal.style.display = 'none';
   };

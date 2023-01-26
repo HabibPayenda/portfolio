@@ -709,6 +709,22 @@ header {
   margin: 20px;
 }
 
+.dropdown-item-container {
+  display: flex;
+  transform-origin: 50% 0;
+  animation: dropDown 0.3s;
+}
+
+@keyframes dropDown {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .dropdown-item {
   display: flex;
   align-items: center;
