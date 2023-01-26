@@ -13,6 +13,18 @@ const connectBtn = document.getElementById('connectBtn');
 const languages = document.getElementById('languagesContainer');
 const languagesPanel = document.getElementById('languagesPanel');
 
+const frameworks = document.getElementById('frameworks');
+const frameworksPanel = document.getElementById('frameworksPanel');
+
+frameworksPanel.addEventListener(('click'), () => {
+  if (frameworks.style.display === 'flex') {
+    frameworks.style.display = 'none';
+  } else {
+    frameworks.style.display = 'flex';
+    languages.style.display = 'none';
+  }
+});
+
 languagesPanel.addEventListener('click', () => {
   if (languages.style.display === 'flex') {
     languages.style.display = 'none';
@@ -20,6 +32,7 @@ languagesPanel.addEventListener('click', () => {
   } else {
     languages.style.display = 'flex';
     languages.style.opacity = '100%';
+    frameworks.style.display = 'none';
   }
 });
 
