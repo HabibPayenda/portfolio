@@ -702,6 +702,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  transition: all 0.3s;
+}
+
+.details-2-content:hover {
+  background-color: rgba(96, 112, 255, 0.85);
+  color: white;
+  transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .details-2-title {
