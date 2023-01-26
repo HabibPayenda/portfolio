@@ -2,6 +2,89 @@ const menu = document.getElementById('menu');
 const close = document.getElementById('close');
 const openNav = document.getElementById('openNav');
 const items = document.getElementsByClassName('item');
+const audio = document.getElementById('audio');
+const audio2 = document.getElementById('audio2');
+const audio3 = document.getElementById('audio3');
+const audio4 = document.getElementById('audio4');
+const pors = document.getElementsByClassName('por');
+const fas = document.getElementsByClassName('fa');
+const connectBtn = document.getElementById('connectBtn');
+
+const languages = document.getElementById('languagesContainer');
+const languagesPanel = document.getElementById('languagesPanel');
+
+const frameworks = document.getElementById('frameworks');
+const frameworksPanel = document.getElementById('frameworksPanel');
+
+const databases = document.getElementById('databases');
+const databasesPanel = document.getElementById('databasesPanel');
+
+const skills = document.getElementById('skills');
+const skillsPanel = document.getElementById('skillsPanel');
+
+skillsPanel.addEventListener('click', () => {
+  audio.play();
+  if (skills.style.display === 'flex') {
+    skills.style.display = 'none';
+  } else {
+    skills.style.display = 'flex';
+    frameworks.style.display = 'none';
+    languages.style.display = 'none';
+    databases.style.display = 'none';
+  }
+});
+
+databasesPanel.addEventListener('click', () => {
+  audio.play();
+  if (databases.style.display === 'flex') {
+    databases.style.display = 'none';
+  } else {
+    databases.style.display = 'flex';
+    frameworks.style.display = 'none';
+    languages.style.display = 'none';
+    skills.style.display = 'none';
+  }
+});
+
+frameworksPanel.addEventListener(('click'), () => {
+  audio.play();
+  if (frameworks.style.display === 'flex') {
+    frameworks.style.display = 'none';
+  } else {
+    frameworks.style.display = 'flex';
+    languages.style.display = 'none';
+    databases.style.display = 'none';
+    skills.style.display = 'none';
+  }
+});
+
+languagesPanel.addEventListener('click', () => {
+  audio.play();
+  if (languages.style.display === 'flex') {
+    languages.style.display = 'none';
+    languages.style.opacity = 0;
+  } else {
+    languages.style.display = 'flex';
+    languages.style.opacity = '100%';
+    frameworks.style.display = 'none';
+    databases.style.display = 'none';
+    skills.style.display = 'none';
+  }
+});
+
+connectBtn.addEventListener('mouseover', () => audio4.play());
+
+Array.from(fas).forEach((fa) => {
+  fa.addEventListener('mouseover', () => {
+    audio2.play();
+  });
+});
+Array.from(pors).forEach((por) => {
+  por.addEventListener('mouseover', () => {
+    audio.play();
+  });
+});
+
 menu.onclick = () => {
   openNav.style.display = 'block';
 };
@@ -19,44 +102,44 @@ newItems.forEach((item) => {
 });
 const projects = [
   {
-    name: 'Canopy',
-    details: ['CANOPY', 'Back End Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Cash Guys',
+    details: ['Microverse', 'Ruby on Rails App', '2023'],
+    description: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
+    fullDescription: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
-    techs: ['html', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['HTML', 'CSS', 'Ruby on Rails', 'PostgreSQL'],
+    liveLink: 'https://rails-ah0l.onrender.com/',
+    sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
   {
-    name: 'Multi-Post Stories',
-    details: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Countries Info',
+    details: ['Microverse', 'React App', '2022'],
+    description: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
+    fullDescription: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     image: './img/pic',
-    techs: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    liveLink: 'https://southaisacountries.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/Countries',
   },
   {
-    name: 'Facebook 360',
-    details: ['FACEBOOK', 'Full Stack Dev', '2015'],
-    description: 'A daily selection of privately personalized reads: no accounts or sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Book Store CMS',
+    details: ['Microverse', 'React App', '2022'],
+    description: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
+    fullDescription: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     image: './img/pic',
-    techs: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    liveLink: 'https://bookstore-redux.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/BookStore',
   },
   {
-    name: 'Uber Navigation',
-    details: ['Uber', 'Lead Developer', '2018'],
-    description: 'A daily selection of privately personalized reads: no accountsor sign-ups required.',
-    fullDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    name: 'Math Magicians',
+    details: ['Microverse', 'React App', '2022'],
+    description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
+    fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
-    techs: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '#',
-    sourceLink: '#',
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    liveLink: 'https://6324c2d62139ab0f678d36d3--endearing-sopapillas-233e38.netlify.app/',
+    sourceLink: 'https://github.com/HabibPayenda/mathMagicians',
   },
 ];
 
@@ -147,7 +230,7 @@ const modalCreator = () => {
   const modalSeeSource = document.createElement('a');
   // modalSeeSource.classList.add('see-project', 'modal-see');
   modalSeeSource.innerText = 'See Source';
-  modalSeeSource.setAttribute('href', modalData.liveLink);
+  modalSeeSource.setAttribute('href', modalData.sourceLink);
   modalSeeSource.onclick = () => {
     projectModal.style.display = 'none';
   };
@@ -172,9 +255,13 @@ for (let i = 0; i < projects.length; i += 1) {
   const card = document.createElement('div');
   card.setAttribute('id', JSON.stringify(num));
   card.classList.add('card', `card${num}`);
+  const cardImageContainer = document.createElement('div');
+  cardImageContainer.classList.add('cardImageContainer');
+  cardImageContainer.addEventListener('mouseover', () => audio3.play());
   const cardImage = document.createElement('div');
   cardImage.classList.add('card-img', `card-img-${num}`);
   cardImage.style.backgroundImage = window.matchMedia('(min-width: 768px)') ? `url(${projects[i].image}B${num}.png)` : `url(${projects[i].image}${num}.png)`;
+  cardImageContainer.append(cardImage);
   const detailsContainer = document.createElement('div');
   detailsContainer.classList.add('details-container', 'card-details-1');
   const mainTitle = document.createElement('h2');
@@ -194,6 +281,7 @@ for (let i = 0; i < projects.length; i += 1) {
   techUsed.classList.add('tech-used');
   projects[i].techs.forEach((item) => {
     const techItem = document.createElement('li');
+    techItem.addEventListener('mouseover', () => audio2.play());
     techItem.innerText = item;
     techUsed.append(techItem);
   });
@@ -201,6 +289,8 @@ for (let i = 0; i < projects.length; i += 1) {
   const seeProject = document.createElement('a');
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
+  seeProject.addEventListener('mouseover', () => audio4.play());
+  seeProject.addEventListener('mouseleave', () => audio4.stop());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
@@ -209,7 +299,7 @@ for (let i = 0; i < projects.length; i += 1) {
   };
 
   detailsContainer.append(mainTitle, subDeatails, cardText, techUsed, seeProject);
-  card.append(cardImage, detailsContainer);
+  card.append(cardImageContainer, detailsContainer);
   worksSection.append(card);
 }
 

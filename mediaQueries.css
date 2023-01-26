@@ -83,10 +83,7 @@
     width: 270px;
     transition: all 0.4s ease;
     height: 350px;
-  }
-
-  .card-img:hover {
-    transform: scale(1.05);
+    flex: 1.5;
   }
 
   .sub-item {
@@ -121,6 +118,7 @@
   .dropdown-item-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .dropdown-item {
@@ -192,17 +190,6 @@
 
   .logo {
     transition: all 3s ease-in;
-    animation: rotateLogo 3s;
-  }
-
-  @keyframes rotateLogo {
-    from {
-      transform: scale(0) rotate(1deg);
-    }
-
-    to {
-      transform: scale(1) rotate(360deg);
-    }
   }
 
   #menu {
@@ -449,9 +436,11 @@
   }
 
   .text-holder-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
-    margin: 142px;
-    margin-right: 1px;
+    margin: 0 35px;
   }
 
   .dropdown-item-container {
