@@ -87,12 +87,15 @@ Array.from(pors).forEach((por) => {
 
 menu.onclick = () => {
   openNav.style.display = 'block';
+  openNav.style.transform = 'translateX(0)';
+  openNav.style.animation = 'slideIn ease-in-out 0.3s';
 };
 menu.onmouseover = () => {
   document.body.style.cursor = 'hand';
 };
 close.onclick = () => {
-  openNav.style.display = 'none';
+  openNav.style.animation = 'slideOut ease-in-out 0.3s';
+  openNav.style.transform = 'translateX(100%)';
 };
 const newItems = [...items];
 newItems.forEach((item) => {
