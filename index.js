@@ -292,6 +292,7 @@ for (let i = 0; i < projects.length; i += 1) {
   const seeProject = document.createElement('a');
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
+
   seeProject.addEventListener('mouseover', () => audio4.play());
   seeProject.addEventListener('mouseleave', () => audio4.stop());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
