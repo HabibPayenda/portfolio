@@ -309,6 +309,7 @@ for (let i = 0; i < projects.length; i += 1) {
 const form = document.getElementById('form');
 const userName = document.getElementById('name');
 const nameTag = document.getElementById('nameTag');
+
 userName.addEventListener('focus', () => {
   nameTag.style.display = 'block';
   nameTag.style.transform = 'translateY(-10px)';
@@ -322,7 +323,24 @@ userName.addEventListener('focusout', () => {
     userName.placeholder = 'Enter Your Name:';
   }
 });
+
 const email = document.getElementById('email');
+const emailTag = document.getElementById('emailTag');
+
+email.addEventListener('focus', () => {
+  emailTag.style.display = 'block';
+  emailTag.style.transform = 'translateY(-10px)';
+  email.placeholder = '';
+});
+
+email.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    emailTag.style.display = 'none';
+    emailTag.style.transform = 'translateY(0px)';
+    email.placeholder = 'Enter Your Email:';
+  }
+});
+
 const emailText = document.getElementById('emailText');
 
 const userDataCheck = !!localStorage.getItem('userData');
