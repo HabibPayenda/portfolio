@@ -311,13 +311,15 @@ const userName = document.getElementById('name');
 const nameTag = document.getElementById('nameTag');
 userName.addEventListener('focus', () => {
   nameTag.style.display = 'block';
-  nameTag.style.transform = 'translateY(0)';
+  nameTag.style.transform = 'translateY(-10px)';
+  userName.placeholder = '';
 });
 
 userName.addEventListener('focusout', () => {
   if (userName.value === '') {
     nameTag.style.display = 'none';
-    nameTag.style.transform = 'translateY(-50px)';
+    nameTag.style.transform = 'translateY(0px)';
+    userName.placeholder = 'Enter Your Name:';
   }
 });
 const email = document.getElementById('email');

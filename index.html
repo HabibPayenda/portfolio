@@ -268,9 +268,11 @@
             </p>
         </div>
         <form id="form" action="https://formspree.io/f/mrgjwpba" method="post">
-            <input id="name" type="text" class="input" name="name" placeholder="Enter Your Name:" required
-                maxlength="30">
-            <span id="nameTag" class="inputTag">Enter your name:</span>
+            <div class="inputContainer">
+                <span id="nameTag" class="inputTag">Enter your name:</span>
+                <input id="name" type="text" class="input" name="name" placeholder="Enter Your Name:" required
+                    maxlength="30">
+            </div>
             <input id="email" type="email" class="input" name="email" placeholder="Enter Your Email:" required>
 
             <small id="email-text" class="email-err"></small>

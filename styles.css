@@ -924,7 +924,14 @@ header {
   color: rgb(255, 255, 255);
 }
 
+.inputContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .input {
+  width: 100%;
   padding: 15px;
   margin-bottom: 10px;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -942,24 +949,26 @@ header {
 .inputTag {
   display: none;
   width: fit-content;
-  background-color: rgb(103, 121, 142);
   padding: 5px 10px;
-  color: rgb(34, 48, 210);
+  color: white;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   z-index: 1;
-  transform: translateY(-50px);
+  transform: translateY(20px);
   border-radius: 8px;
-  margin-left: 12px;
-  margin-bottom: 10px;
+  margin-left: 5px;
   animation: moveDown ease-in-out 0.3s;
+  position: absolute;
+  top: -22px;
+  left: 0;
 }
 
 @keyframes moveDown {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(20px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(-10px);
   }
 }
 
