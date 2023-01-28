@@ -342,6 +342,21 @@ email.addEventListener('focusout', () => {
 });
 
 const emailText = document.getElementById('emailText');
+const textTag = document.getElementById('textTag');
+
+emailText.addEventListener('focus', () => {
+  textTag.style.display = 'block';
+  textTag.style.transform = 'translateY(-10px)';
+  emailText.innerText = '';
+});
+
+emailText.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    textTag.style.display = 'none';
+    textTag.style.transform = 'translateY(0px)';
+    emailText.innerText = 'Write your message here!';
+  }
+});
 
 const userDataCheck = !!localStorage.getItem('userData');
 if (userDataCheck) {

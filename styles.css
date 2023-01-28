@@ -994,6 +994,7 @@ header {
   color: rgb(179, 186, 197);
   line-height: 24px;
   font-family: "poppins", Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .button {
