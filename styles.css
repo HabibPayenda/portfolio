@@ -936,6 +936,31 @@ header {
   line-height: 20px;
   border: 1px solid rgb(207, 216, 220);
   border-radius: 8px;
+  position: relative;
+}
+
+.inputTag {
+  display: none;
+  width: fit-content;
+  background-color: rgb(103, 121, 142);
+  padding: 5px 10px;
+  color: rgb(34, 48, 210);
+  z-index: 1;
+  transform: translateY(-50px);
+  border-radius: 8px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  animation: moveDown ease-in-out 0.3s;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .email-err {

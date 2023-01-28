@@ -294,7 +294,6 @@ for (let i = 0; i < projects.length; i += 1) {
   seeProject.innerText = 'See Project';
 
   seeProject.addEventListener('mouseover', () => audio4.play());
-  seeProject.addEventListener('mouseleave', () => audio4.stop());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
@@ -309,6 +308,18 @@ for (let i = 0; i < projects.length; i += 1) {
 
 const form = document.getElementById('form');
 const userName = document.getElementById('name');
+const nameTag = document.getElementById('nameTag');
+userName.addEventListener('focus', () => {
+  nameTag.style.display = 'block';
+  nameTag.style.transform = 'translateY(0)';
+});
+
+userName.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    nameTag.style.display = 'none';
+    nameTag.style.transform = 'translateY(-50px)';
+  }
+});
 const email = document.getElementById('email');
 const emailText = document.getElementById('emailText');
 
