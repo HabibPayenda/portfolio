@@ -149,43 +149,43 @@ const projects = [
 const techInfo = {
   CSS: {
     img: './img/css.png',
-    info: 'Cascading Style Sheet',
+    info: 'CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.',
   },
   JSX: {
-    img: './img/js.png',
-    info: 'Cascading Style Sheet',
+    img: './img/jsx.png',
+    info: 'JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.',
   },
   AJAX: {
-    img: './img/js.png',
-    info: 'Cascading Style Sheet',
+    img: './img/ajax.png',
+    info: 'AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes.',
   },
   JS: {
     img: './img/js.png',
-    info: 'Cascading Style Sheet',
+    info: 'JavaScript is the worlds most popular programming language. JavaScript is the programming language of the Web.',
   },
   React: {
     img: './img/react logo.png',
-    info: 'Cascading Style Sheet',
+    info: 'React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces.',
   },
   Redux: {
-    img: './img/react logo.png',
-    info: 'Cascading Style Sheet',
+    img: './img/redux.png',
+    info: 'Redux is a predictable state container designed to help you write JavaScript apps that behave consistently across client and server.',
   },
   React_Router: {
-    img: './img/react logo.png',
-    info: 'Cascading Style Sheet',
+    img: './img/reactrouter.png',
+    info: 'React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application',
   },
   Ruby_on_Rails: {
     img: './img/rails.png',
-    info: 'Cascading Style Sheet',
+    info: 'Rails is a full-stack framework. It ships with all the tools needed to build amazing web apps on both the front and back end.',
   },
   HTML: {
     img: './img/html.png',
-    info: 'Cascading Style Sheet',
+    info: 'HTML stands for Hyper Text Markup Language · HTML is the standard markup language for creating Web pages · HTML describes the structure of a Web page',
   },
   PostgreSQL: {
     img: './img/postgresql.png',
-    info: 'Cascading Style Sheet',
+    info: 'PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development.',
   },
 };
 
@@ -331,27 +331,34 @@ for (let i = 0; i < projects.length; i += 1) {
     techItemContainer.classList.add('techItemContainer');
     const techItem = document.createElement('li');
     techItem.innerText = item;
+    const techItemInfoContainer = document.createElement('div');
+    techItemInfoContainer.classList.add('techItemInfoContainer');
+    techItemInfoContainer.setAttribute('id', index);
     const techItemInfo = document.createElement('div');
     techItemInfo.setAttribute('id', index);
     techItemInfo.classList.add('techInfo');
+    const techInfoImageContainer = document.createElement('div');
     const techItemInfoImage = document.createElement('img');
     techItemInfoImage.classList.add('techInfoImage');
     // eslint-disable-next-line dot-notation
     techItemInfoImage.setAttribute('src', techInfo[item].img);
+    techInfoImageContainer.append(techItemInfoImage);
+    techInfoImageContainer.classList.add('techInfoImageContainer');
+    techItemInfoImage.classList.add('techItemInfoImage');
     const techInfoText = document.createElement('p');
     techInfoText.classList.add('techInfoText');
     techInfoText.innerText = techInfo[item].info;
-    techItemInfo.append(techItemInfoImage, techInfoText);
+    techItemInfo.append(techInfoImageContainer, techInfoText);
     techItemContainer.addEventListener('mouseover', () => {
-      if (techItemInfo.id === techItemContainer.id) {
-        techItemInfo.style.display = 'flex';
+      if (techItemInfoContainer.id === techItemContainer.id) {
+        techItemInfoContainer.style.display = 'flex';
       }
     });
     techItemContainer.addEventListener('mouseleave', () => {
-      techItemInfo.style.display = 'none';
+      techItemInfoContainer.style.display = 'none';
     });
-
-    techItemContainer.append(techItem, techItemInfo);
+    techItemInfoContainer.append(techItemInfo);
+    techItemContainer.append(techItem, techItemInfoContainer);
     techUsed.append(techItemContainer);
   });
 
