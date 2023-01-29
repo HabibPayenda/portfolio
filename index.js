@@ -110,7 +110,7 @@ const projects = [
     description: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
     fullDescription: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
-    techs: ['HTML', 'CSS', 'Ruby on Rails', 'PostgreSQL'],
+    techs: ['HTML', 'CSS', 'Ruby_on_Rails', 'PostgreSQL'],
     liveLink: 'https://rails-ah0l.onrender.com/',
     sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
@@ -120,7 +120,7 @@ const projects = [
     description: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     fullDescription: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://southaisacountries.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/Countries',
   },
@@ -130,7 +130,7 @@ const projects = [
     description: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     fullDescription: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://bookstore-redux.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/BookStore',
   },
@@ -140,11 +140,54 @@ const projects = [
     description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://6324c2d62139ab0f678d36d3--endearing-sopapillas-233e38.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/mathMagicians',
   },
 ];
+
+const techInfo = {
+  CSS: {
+    img: './img/css.png',
+    info: 'Cascading Style Sheet',
+  },
+  JSX: {
+    img: './img/js.png',
+    info: 'Cascading Style Sheet',
+  },
+  AJAX: {
+    img: './img/js.png',
+    info: 'Cascading Style Sheet',
+  },
+  JS: {
+    img: './img/js.png',
+    info: 'Cascading Style Sheet',
+  },
+  React: {
+    img: './img/react logo.png',
+    info: 'Cascading Style Sheet',
+  },
+  Redux: {
+    img: './img/react logo.png',
+    info: 'Cascading Style Sheet',
+  },
+  React_Router: {
+    img: './img/react logo.png',
+    info: 'Cascading Style Sheet',
+  },
+  Ruby_on_Rails: {
+    img: './img/rails.png',
+    info: 'Cascading Style Sheet',
+  },
+  HTML: {
+    img: './img/html.png',
+    info: 'Cascading Style Sheet',
+  },
+  PostgreSQL: {
+    img: './img/postgresql.png',
+    info: 'Cascading Style Sheet',
+  },
+};
 
 const worksSection = document.getElementById('Portfolio');
 const modalContainer = document.getElementById('modalContainer');
@@ -291,6 +334,14 @@ for (let i = 0; i < projects.length; i += 1) {
     const techItemInfo = document.createElement('div');
     techItemInfo.setAttribute('id', index);
     techItemInfo.classList.add('techInfo');
+    const techItemInfoImage = document.createElement('img');
+    techItemInfoImage.classList.add('techInfoImage');
+    // eslint-disable-next-line dot-notation
+    techItemInfoImage.setAttribute('src', techInfo[item].img);
+    const techInfoText = document.createElement('p');
+    techInfoText.classList.add('techInfoText');
+    techInfoText.innerText = techInfo[item].info;
+    techItemInfo.append(techItemInfoImage, techInfoText);
     techItemContainer.addEventListener('mouseover', () => {
       if (techItemInfo.id === techItemContainer.id) {
         techItemInfo.style.display = 'flex';

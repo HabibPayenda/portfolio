@@ -511,6 +511,9 @@ header {
   display: none;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
   position: absolute;
   top: -540%;
   left: 0;
@@ -531,6 +534,17 @@ header {
   100% {
     transform: translateY(0) scaleY(1);
   }
+}
+
+.techInfoImage {
+  flex: 1;
+  height: 50px;
+  width: 50px;
+}
+
+.techInfoText {
+  flex: 2;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 .fa-container-about ul li {
