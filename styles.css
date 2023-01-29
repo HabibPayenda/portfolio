@@ -155,6 +155,16 @@ header {
   animation: slideIn ease-in-out 0.3s;
 }
 
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -355,6 +365,8 @@ header {
   height: 220px;
   position: relative;
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
 }
 
 .card-img::before {
@@ -462,6 +474,10 @@ header {
 }
 
 .tech-used {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -481,6 +497,115 @@ header {
   border-radius: 5px;
   letter-spacing: 0.03em;
   transition: all 0.3s;
+}
+
+.techItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.techItemInfoContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  position: absolute;
+  top: -650%;
+  left: -50%;
+  height: 220px;
+  z-index: 1000;
+  width: 180px;
+  background-color: rgba(96, 112, 255, 0.85);
+  box-shadow: 0 10px 10px rgb(153, 153, 153);
+  border-top: solid 1px #999;
+  border-radius: 8px;
+  color: white;
+  transform-origin: 50% 100%;
+  animation: slideUp 0.4s ease-in-out;
+  clip-path:
+    polygon(
+      0% 0%,
+      100% 0%,
+      100% calc(100% - 10px),
+      calc(50% + 10px) calc(100% - 10px),
+      50% 100%,
+      calc(50% - 10px) calc(100% - 10px),
+      0% calc(100% - 10px)
+    );
+}
+
+.techInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  height: 99%;
+  width: 99%;
+  border-radius: 5px;
+  opacity: 0;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(153, 153, 153, 0.459);
+  border-top: solid 1px #999;
+  color: white;
+  transform-origin: 50% 100%;
+  animation: slideUp 0.4s ease-in-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  clip-path:
+    polygon(
+      0% 0%,
+      100% 0%,
+      100% calc(100% - 10px),
+      calc(50% + 10px) calc(100% - 10px),
+      50% 100%,
+      calc(50% - 10px) calc(100% - 10px),
+      0% calc(100% - 10px)
+    );
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(5px) scaleY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.techInfoImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  flex: 1;
+}
+
+.techInfoImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: white;
+  padding: 5px;
+}
+
+.techInfoText {
+  flex: 2;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  text-align: left;
+  align-self: flex-start;
+  color: black;
 }
 
 .fa-container-about ul li {
@@ -513,13 +638,63 @@ header {
   margin-left: 14px;
   color: rgb(96, 112, 255);
   transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.see-project::before {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(96, 112, 255, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+}
+
+.see-project:hover::before {
+  animation: btnSlideIn ease-in-out 0.2s;
+  transform: translateX(0);
+  color: white;
+}
+
+@keyframes btnSlideOut {
+  from {
+    transform: var(--translateX0);
+  }
+
+  to {
+    transform: var(--translateX100);
+  }
+}
+
+@keyframes btnSlideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes btnSlideOut {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .see-project:hover {
-  background: rgb(96, 112, 255);
   box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
-  border-radius: 8px;
   color: rgb(255, 255, 255);
+  z-index: 100;
 }
 
 .see-project:active {
@@ -862,7 +1037,14 @@ header {
   color: rgb(255, 255, 255);
 }
 
+.inputContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .input {
+  width: 100%;
   padding: 15px;
   margin-bottom: 10px;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -874,6 +1056,33 @@ header {
   line-height: 20px;
   border: 1px solid rgb(207, 216, 220);
   border-radius: 8px;
+  position: relative;
+}
+
+.inputTag {
+  display: none;
+  width: fit-content;
+  padding: 5px 10px;
+  color: white;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  z-index: 1;
+  transform: translateY(20px);
+  border-radius: 8px;
+  margin-left: 5px;
+  animation: moveDown ease-in-out 0.3s;
+  position: absolute;
+  top: -16px;
+  left: 0;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .email-err {
@@ -898,6 +1107,7 @@ header {
   color: rgb(179, 186, 197);
   line-height: 24px;
   font-family: "poppins", Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .button {

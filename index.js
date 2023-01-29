@@ -87,12 +87,15 @@ Array.from(pors).forEach((por) => {
 
 menu.onclick = () => {
   openNav.style.display = 'block';
+  openNav.style.transform = 'translateX(0)';
+  openNav.style.animation = 'slideIn ease-in-out 0.3s';
 };
 menu.onmouseover = () => {
   document.body.style.cursor = 'hand';
 };
 close.onclick = () => {
-  openNav.style.display = 'none';
+  openNav.style.animation = 'slideOut ease-in-out 0.3s';
+  openNav.style.transform = 'translateX(100%)';
 };
 const newItems = [...items];
 newItems.forEach((item) => {
@@ -107,7 +110,7 @@ const projects = [
     description: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories.',
     fullDescription: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
-    techs: ['HTML', 'CSS', 'Ruby on Rails', 'PostgreSQL'],
+    techs: ['HTML', 'CSS', 'Ruby_on_Rails', 'PostgreSQL'],
     liveLink: 'https://rails-ah0l.onrender.com/',
     sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
@@ -117,7 +120,7 @@ const projects = [
     description: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     fullDescription: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://southaisacountries.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/Countries',
   },
@@ -127,7 +130,7 @@ const projects = [
     description: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     fullDescription: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://bookstore-redux.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/BookStore',
   },
@@ -137,11 +140,54 @@ const projects = [
     description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
-    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React Router', 'Redux'],
+    techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://6324c2d62139ab0f678d36d3--endearing-sopapillas-233e38.netlify.app/',
     sourceLink: 'https://github.com/HabibPayenda/mathMagicians',
   },
 ];
+
+const techInfo = {
+  CSS: {
+    img: './img/css.png',
+    info: 'CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.',
+  },
+  JSX: {
+    img: './img/jsx.png',
+    info: 'JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.',
+  },
+  AJAX: {
+    img: './img/ajax.png',
+    info: 'AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes.',
+  },
+  JS: {
+    img: './img/js.png',
+    info: 'JavaScript is the worlds most popular programming language. JavaScript is the programming language of the Web.',
+  },
+  React: {
+    img: './img/react logo.png',
+    info: 'React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces.',
+  },
+  Redux: {
+    img: './img/redux.png',
+    info: 'Redux is a predictable state container designed to help you write JavaScript apps that behave consistently across client and server.',
+  },
+  React_Router: {
+    img: './img/reactrouter.png',
+    info: 'React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application',
+  },
+  Ruby_on_Rails: {
+    img: './img/rails.png',
+    info: 'Rails is a full-stack framework. It ships with all the tools needed to build amazing web apps on both the front and back end.',
+  },
+  HTML: {
+    img: './img/html.png',
+    info: 'HTML stands for Hyper Text Markup Language · HTML is the standard markup language for creating Web pages · HTML describes the structure of a Web page',
+  },
+  PostgreSQL: {
+    img: './img/postgresql.png',
+    info: 'PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development.',
+  },
+};
 
 const worksSection = document.getElementById('Portfolio');
 const modalContainer = document.getElementById('modalContainer');
@@ -279,18 +325,48 @@ for (let i = 0; i < projects.length; i += 1) {
   cardText.innerText = projects[i].description;
   const techUsed = document.createElement('ul');
   techUsed.classList.add('tech-used');
-  projects[i].techs.forEach((item) => {
+  projects[i].techs.forEach((item, index) => {
+    const techItemContainer = document.createElement('div');
+    techItemContainer.setAttribute('id', index);
+    techItemContainer.classList.add('techItemContainer');
     const techItem = document.createElement('li');
-    techItem.addEventListener('mouseover', () => audio2.play());
     techItem.innerText = item;
-    techUsed.append(techItem);
+    const techItemInfoContainer = document.createElement('div');
+    techItemInfoContainer.classList.add('techItemInfoContainer');
+    techItemInfoContainer.setAttribute('id', index);
+    const techItemInfo = document.createElement('div');
+    techItemInfo.setAttribute('id', index);
+    techItemInfo.classList.add('techInfo');
+    const techInfoImageContainer = document.createElement('div');
+    const techItemInfoImage = document.createElement('img');
+    techItemInfoImage.classList.add('techInfoImage');
+    // eslint-disable-next-line dot-notation
+    techItemInfoImage.setAttribute('src', techInfo[item].img);
+    techInfoImageContainer.append(techItemInfoImage);
+    techInfoImageContainer.classList.add('techInfoImageContainer');
+    techItemInfoImage.classList.add('techItemInfoImage');
+    const techInfoText = document.createElement('p');
+    techInfoText.classList.add('techInfoText');
+    techInfoText.innerText = techInfo[item].info;
+    techItemInfo.append(techInfoImageContainer, techInfoText);
+    techItemContainer.addEventListener('mouseover', () => {
+      if (techItemInfoContainer.id === techItemContainer.id) {
+        techItemInfoContainer.style.display = 'flex';
+      }
+    });
+    techItemContainer.addEventListener('mouseleave', () => {
+      techItemInfoContainer.style.display = 'none';
+    });
+    techItemInfoContainer.append(techItemInfo);
+    techItemContainer.append(techItem, techItemInfoContainer);
+    techUsed.append(techItemContainer);
   });
 
   const seeProject = document.createElement('a');
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
+
   seeProject.addEventListener('mouseover', () => audio4.play());
-  seeProject.addEventListener('mouseleave', () => audio4.stop());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
@@ -305,8 +381,55 @@ for (let i = 0; i < projects.length; i += 1) {
 
 const form = document.getElementById('form');
 const userName = document.getElementById('name');
+const nameTag = document.getElementById('nameTag');
+
+userName.addEventListener('focus', () => {
+  nameTag.style.display = 'block';
+  nameTag.style.transform = 'translateY(-10px)';
+  userName.placeholder = '';
+});
+
+userName.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    nameTag.style.display = 'none';
+    nameTag.style.transform = 'translateY(0px)';
+    userName.placeholder = 'Enter Your Name:';
+  }
+});
+
 const email = document.getElementById('email');
+const emailTag = document.getElementById('emailTag');
+
+email.addEventListener('focus', () => {
+  emailTag.style.display = 'block';
+  emailTag.style.transform = 'translateY(-10px)';
+  email.placeholder = '';
+});
+
+email.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    emailTag.style.display = 'none';
+    emailTag.style.transform = 'translateY(0px)';
+    email.placeholder = 'Enter Your Email:';
+  }
+});
+
 const emailText = document.getElementById('emailText');
+const textTag = document.getElementById('textTag');
+
+emailText.addEventListener('focus', () => {
+  textTag.style.display = 'block';
+  textTag.style.transform = 'translateY(-10px)';
+  emailText.innerText = '';
+});
+
+emailText.addEventListener('focusout', () => {
+  if (userName.value === '') {
+    textTag.style.display = 'none';
+    textTag.style.transform = 'translateY(0px)';
+    emailText.innerText = 'Write your message here!';
+  }
+});
 
 const userDataCheck = !!localStorage.getItem('userData');
 if (userDataCheck) {

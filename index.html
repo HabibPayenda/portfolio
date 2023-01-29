@@ -243,12 +243,6 @@
                         <div class="dropdown-item">
                             <a class="language">GitHub</a>
                         </div>
-                        <div class="dropdown-item">
-                            <a class="language">Figma</a>
-                        </div>
-                        <div class="dropdown-item">
-                            <a class="language">Adobe Illustrator</a>
-                        </div>
                     </div>
                     <hr>
                 </li>
@@ -268,12 +262,22 @@
             </p>
         </div>
         <form id="form" action="https://formspree.io/f/mrgjwpba" method="post">
-            <input id="name" type="text" class="input" name="name" placeholder="Enter Your Name:" required
-                maxlength="30">
-            <input id="email" type="email" class="input" name="email" placeholder="Enter Your Email:" required>
+            <div class="inputContainer">
+                <span id="nameTag" class="inputTag">Enter Your Name:</span>
+                <input id="name" type="text" class="input" name="name" placeholder="Enter Your Name:" required
+                    maxlength="30">
+            </div>
+            <div class="inputContainer">
+                <span id="emailTag" class="inputTag">Enter Your Email:</span>
+                <input id="email" type="email" class="input" name="email" placeholder="Enter Your Email:" required>
+            </div>
+
             <small id="email-text" class="email-err"></small>
-            <textarea id="emailText" name="message" class="area" required
-                maxlength="500">Write your message here!</textarea>
+            <div class="inputContainer">
+                <span id="textTag" class="inputTag">Write Your Message Here!</span>
+                <textarea id="emailText" name="message" class="area" required
+                    maxlength="500">Write your message here!</textarea>
+            </div>
             <button type="submit" class="button">Get In Touch!</button>
         </form>
         <div class="last-div"></div>
