@@ -282,11 +282,26 @@ for (let i = 0; i < projects.length; i += 1) {
   cardText.innerText = projects[i].description;
   const techUsed = document.createElement('ul');
   techUsed.classList.add('tech-used');
-  projects[i].techs.forEach((item) => {
+  projects[i].techs.forEach((item, index) => {
+    const techItemContainer = document.createElement('div');
+    techItemContainer.setAttribute('id', index);
+    techItemContainer.classList.add('techItemContainer');
     const techItem = document.createElement('li');
-    techItem.addEventListener('mouseover', () => audio2.play());
     techItem.innerText = item;
-    techUsed.append(techItem);
+    const techItemInfo = document.createElement('div');
+    techItemInfo.setAttribute('id', index);
+    techItemInfo.classList.add('techInfo');
+    techItemContainer.addEventListener('mouseover', () => {
+      if (techItemInfo.id === techItemContainer.id) {
+        techItemInfo.style.display = 'flex';
+      }
+    });
+    techItemContainer.addEventListener('mouseleave', () => {
+      techItemInfo.style.display = 'none';
+    });
+
+    techItemContainer.append(techItem, techItemInfo);
+    techUsed.append(techItemContainer);
   });
 
   const seeProject = document.createElement('a');
