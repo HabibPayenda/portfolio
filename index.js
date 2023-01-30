@@ -115,10 +115,10 @@ const projects = [
     sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
   {
-    name: 'Countries Info',
+    name: 'Country Info',
     details: ['Microverse', 'React App', '2022'],
-    description: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
-    fullDescription: 'Countries is a small we app which gets details about countries from an API and shows some details about each country like name, flag, latitude, longitude and population.',
+    description: 'Country Info is a web app that gets details about countries from an API and shows details about each country as name, flag, latitude, longitude, and population.',
+    fullDescription: 'Country Info is a web app that gets details about countries from an API and shows details about each country as name, flag, latitude, longitude, and population.',
     image: './img/pic',
     techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://southaisacountries.netlify.app/',
@@ -127,8 +127,8 @@ const projects = [
   {
     name: 'Book Store CMS',
     details: ['Microverse', 'React App', '2022'],
-    description: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
-    fullDescription: 'A bookstore app that allows a user add a book, displays added book with reviews and rating for each book and allows a user delete a book.',
+    description: 'A bookstore app that allows a user to add a book item and displays the added books. It also allows the user to delete a book.',
+    fullDescription: 'A bookstore app that allows a user to add a book item and displays the added books. It also allows the user to delete a book.',
     image: './img/pic',
     techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://bookstore-redux.netlify.app/',
@@ -137,8 +137,8 @@ const projects = [
   {
     name: 'Math Magicians',
     details: ['Microverse', 'React App', '2022'],
-    description: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
-    fullDescription: 'A basic Calculator App build with React.js that solves basic arithmetic calculations.',
+    description: 'A basic Calculator App built with React.js that solves basic arithmetic calculations.',
+    fullDescription: 'A basic Calculator App built with React.js that solves basic arithmetic calculations.',
     image: './img/pic',
     techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
     liveLink: 'https://6324c2d62139ab0f678d36d3--endearing-sopapillas-233e38.netlify.app/',
@@ -264,22 +264,16 @@ const modalCreator = () => {
   sourceIcon.classList.add('fab', 'fa-github');
 
   const modalSeeLive = document.createElement('a');
-  // modalSeeLive.classList.add('see-project', 'modal-see');
   modalSeeLive.innerText = 'See Live';
   modalSeeLive.setAttribute('href', modalData.liveLink);
-  modalSeeLive.onclick = () => {
-    projectModal.style.display = 'none';
-  };
+  modalSeeLive.setAttribute('target', '_blank');
 
   btnLive.append(modalSeeLive, liveIcon);
 
   const modalSeeSource = document.createElement('a');
-  // modalSeeSource.classList.add('see-project', 'modal-see');
   modalSeeSource.innerText = 'See Source';
   modalSeeSource.setAttribute('href', modalData.sourceLink);
-  modalSeeSource.onclick = () => {
-    projectModal.style.display = 'none';
-  };
+  modalSeeSource.setAttribute('target', '_blank');
 
   btnSource.append(modalSeeSource, sourceIcon);
 
