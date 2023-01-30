@@ -111,7 +111,7 @@ const projects = [
     fullDescription: 'Cash Guys is a Ruby on Rails mobile web application that allows users to keep track of their expenses by adding categories and items to those categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what.',
     image: './img/pic',
     techs: ['HTML', 'CSS', 'Ruby_on_Rails', 'PostgreSQL'],
-    liveLink: 'https://rails-ah0l.onrender.com/',
+    liveLink: 'https://rails-ah0l.onrender.com',
     sourceLink: 'https://github.com/HabibPayenda/personal_badget',
   },
   {
