@@ -4,11 +4,8 @@ const openNav = document.getElementById('openNav');
 const items = document.getElementsByClassName('item');
 const audio = document.getElementById('audio');
 const audio2 = document.getElementById('audio2');
-const audio3 = document.getElementById('audio3');
-const audio4 = document.getElementById('audio4');
 const pors = document.getElementsByClassName('por');
 const fas = document.getElementsByClassName('fa');
-const connectBtn = document.getElementById('connectBtn');
 
 const languages = document.getElementById('languagesContainer');
 const languagesPanel = document.getElementById('languagesPanel');
@@ -23,7 +20,6 @@ const skills = document.getElementById('skills');
 const skillsPanel = document.getElementById('skillsPanel');
 
 skillsPanel.addEventListener('click', () => {
-  audio.play();
   if (skills.style.display === 'flex') {
     skills.style.display = 'none';
   } else {
@@ -35,7 +31,6 @@ skillsPanel.addEventListener('click', () => {
 });
 
 databasesPanel.addEventListener('click', () => {
-  audio.play();
   if (databases.style.display === 'flex') {
     databases.style.display = 'none';
   } else {
@@ -47,7 +42,6 @@ databasesPanel.addEventListener('click', () => {
 });
 
 frameworksPanel.addEventListener(('click'), () => {
-  audio.play();
   if (frameworks.style.display === 'flex') {
     frameworks.style.display = 'none';
   } else {
@@ -59,7 +53,6 @@ frameworksPanel.addEventListener(('click'), () => {
 });
 
 languagesPanel.addEventListener('click', () => {
-  audio.play();
   if (languages.style.display === 'flex') {
     languages.style.display = 'none';
     languages.style.opacity = 0;
@@ -71,8 +64,6 @@ languagesPanel.addEventListener('click', () => {
     skills.style.display = 'none';
   }
 });
-
-connectBtn.addEventListener('mouseover', () => audio4.play());
 
 Array.from(fas).forEach((fa) => {
   fa.addEventListener('mouseover', () => {
@@ -353,7 +344,6 @@ for (let i = 0; i < projects.length; i += 1) {
   seeProject.classList.add('see-project');
   seeProject.innerText = 'See Project';
 
-  seeProject.addEventListener('mouseover', () => audio4.play());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
 
   seeProject.onclick = () => {
