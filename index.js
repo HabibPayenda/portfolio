@@ -122,7 +122,7 @@ const projects = [
     fullDescription: 'A bookstore app that allows a user to add a book item and displays the added books. It also allows the user to delete a book.',
     image: './img/pic',
     techs: ['CSS', 'JSX', 'AJAX', 'React', 'React_Router', 'Redux'],
-    liveLink: 'https://bookstore-redux.netlify.app/',
+    liveLink: 'https://bookstorereact.onrender.com/',
     sourceLink: 'https://github.com/HabibPayenda/BookStore',
   },
   {
