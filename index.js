@@ -194,32 +194,26 @@ const modalContainer = document.getElementById('modalContainer');
 
 /// //////ModalCreator
 
-const modalCreator = () => {
-  const clicked = document.getElementById('clicked');
-  const item = [...clicked.classList];
-  const selectedItem = item[1].split('d');
-  const num = selectedItem[1];
-  const modalData = projects[num - 1];
+const modalCreator = (project, num) => {
   const projectModal = document.createElement('div');
   projectModal.classList.add('projectModal');
   const closeIcon = document.createElement('i');
   closeIcon.classList.add('fa-solid', 'fa-close', 'closeIcon2');
   closeIcon.onclick = () => {
-    clicked.removeAttribute('id', 'clicked');
     projectModal.style.display = 'none';
     modalContainer.style.display = 'none';
   };
 
   const modalTitle = document.createElement('h2');
   modalTitle.classList.add('main-title');
-  modalTitle.innerText = modalData.name;
+  modalTitle.innerText = project.name;
 
   const modalDetails = document.createElement('ul');
   modalDetails.style.alignSelf = 'flex-start';
   modalDetails.style.marginLeft = '16px';
   modalDetails.style.marginTop = '22px';
 
-  modalData.details.forEach((detail) => {
+  project.details.forEach((detail) => {
     const modalDetailLi = document.createElement('li');
     modalDetailLi.classList.add('sub-item');
     modalDetailLi.innerText = detail;
@@ -228,17 +222,17 @@ const modalCreator = () => {
 
   const modalImage = document.createElement('div');
   modalImage.classList.add('modal-card-img');
-  modalImage.style.backgroundImage = `url(${modalData.image}B${num}.png)`;
+  modalImage.style.backgroundImage = `url(${project.image}B${num}.png)`;
 
   const modalText = document.createElement('p');
   modalText.classList.add('modal-text');
-  modalText.innerText = modalData.fullDescription;
+  modalText.innerText = project.fullDescription;
 
   const modalTechUsed = document.createElement('ul');
   modalTechUsed.classList.add('tech-used-modal');
   modalTechUsed.style.alignSelf = 'flex-start';
   modalTechUsed.style.marginLeft = '16px';
-  modalData.techs.forEach((item) => {
+  project.techs.forEach((item) => {
     const modalTechItem = document.createElement('li');
     modalTechItem.innerText = item;
     modalTechUsed.append(modalTechItem);
@@ -265,14 +259,14 @@ const modalCreator = () => {
 
   const modalSeeLive = document.createElement('a');
   modalSeeLive.innerText = 'See Live';
-  modalSeeLive.setAttribute('href', modalData.liveLink);
+  modalSeeLive.setAttribute('href', project.liveLink);
   modalSeeLive.setAttribute('target', '_blank');
 
   btnLive.append(modalSeeLive, liveIcon);
 
   const modalSeeSource = document.createElement('a');
   modalSeeSource.innerText = 'See Source';
-  modalSeeSource.setAttribute('href', modalData.sourceLink);
+  modalSeeSource.setAttribute('href', project.sourceLink);
   modalSeeSource.setAttribute('target', '_blank');
 
   btnSource.append(modalSeeSource, sourceIcon);
@@ -362,10 +356,11 @@ for (let i = 0; i < projects.length; i += 1) {
 
   seeProject.addEventListener('mouseover', () => audio4.play());
   seeProject.setAttribute('href', `#${JSON.stringify(num)}`);
+
   seeProject.onclick = () => {
     modalContainer.style.display = 'flex';
-    seeProject.parentElement.parentElement.setAttribute('id', 'clicked');
-    modalCreator();
+    modalCreator(projects[i], i + 1);
+    // seeProject.parentElement.parentElement.setAttribute('id', 'clicked');
   };
 
   detailsContainer.append(mainTitle, subDeatails, cardText, techUsed, seeProject);
