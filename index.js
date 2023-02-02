@@ -291,7 +291,6 @@ for (let i = 0; i < projects.length; i += 1) {
   card.classList.add('card', `card${num}`);
   const cardImageContainer = document.createElement('div');
   cardImageContainer.classList.add('cardImageContainer');
-  cardImageContainer.addEventListener('mouseover', () => audio3.play());
   const cardImage = document.createElement('div');
   cardImage.classList.add('card-img', `card-img-${num}`);
   cardImage.style.backgroundImage = window.matchMedia('(min-width: 768px)') ? `url(${projects[i].image}B${num}.png)` : `url(${projects[i].image}${num}.png)`;
